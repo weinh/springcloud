@@ -1,5 +1,6 @@
 package com.example.service_ribbon;
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -17,7 +18,12 @@ public class IndexService {
     @Resource
     private RestTemplate restTemplate;
 
+    @HystrixCommand(fallbackMethod = "error")
     public String index(String name) {
         return restTemplate.getForObject("http://CLIENT/index?name=" + name, String.class);
+    }
+
+    public String error(String name) {
+        return "hi," + name + ",sorry,error!";
     }
 }

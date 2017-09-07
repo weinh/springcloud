@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * 开发人员：weinh
  * 开发时间：2017年09月07日
  */
-@FeignClient("client")
+@FeignClient(value = "client", fallback = ServiceHystrix.class)
 public interface IndexService {
     @RequestMapping(value = "index")
     String index(@RequestParam(name = "name") String name);
