@@ -2,8 +2,6 @@ package com.example.servicezuul;
 
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
-import com.netflix.zuul.filters.ZuulServletFilter;
-import org.omg.CORBA.TRANSACTION_UNAVAILABLE;
 import org.springframework.cloud.netflix.zuul.filters.support.FilterConstants;
 import org.springframework.stereotype.Component;
 
