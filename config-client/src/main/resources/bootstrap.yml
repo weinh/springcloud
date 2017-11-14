@@ -1,5 +1,5 @@
 server:
-  port: 7009
+  port: 7010
 spring:
   application:
     name: config-client
@@ -10,8 +10,14 @@ spring:
       discovery:
         enabled: true
         service-id: config-server
-#      uri: http://127.0.0.1:7007/
+  rabbitmq:
+    host: 192.168.178.129
+    username: admin
+    password: 123456
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:7001/eureka/
+management:
+  security:
+    enabled: false
