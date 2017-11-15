@@ -7,3 +7,5 @@ server:
 spring:
   application:
     name: client
+  zipkin:
+    base-url: http://127.0.0.1:7011

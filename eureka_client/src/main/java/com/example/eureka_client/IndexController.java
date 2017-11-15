@@ -7,10 +7,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * 类 名 称：IndexController.java
- * 功能说明：
- * 开发人员：weinh
- * 开发时间：2017年09月05日
+ * @author weinh
  */
 @RestController
 public class IndexController {

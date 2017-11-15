@@ -22,3 +22,6 @@ config-server
 
 config-client
 >配置服务客户端，可以根据配置服务中心的配置获取需要的配置信息，支持通过消息总线的的方式使配置修改及时生效
+
+server-zipkin
+>提供服务之间调用做跟踪记录使用，service-feign调用eureka_client，可以查看依赖关系
