@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: service-turbine
+server:
+  port: 7012
+security:
+  basic:
+    enabled: false
+turbine:
+  aggregator:
+    clusterConfig: default
+  app-config: SERVICE-FEIGN,SERVICE-RIBBON
+  cluster-name-expression: new String("defalut")
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:7001/eureka/

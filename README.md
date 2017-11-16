@@ -29,3 +29,6 @@ config-client
 
 server-zipkin
 >提供服务之间调用做跟踪记录使用，service-feign调用eureka_client，可以查看依赖关系
+
+service-turbine
+>实现断路器聚合监控，可以将多个断路器的结果聚合现实，该配置可以监控service-feign和service_ribbon，这里还有一个问题http://127.0.0.1:7004/hystrix/monitor?stream=127.0.0.1%3A7012%2Fturbine.stream该访问链接没有正确现实，还需要研究
