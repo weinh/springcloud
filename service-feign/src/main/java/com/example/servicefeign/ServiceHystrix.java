@@ -1,6 +1,7 @@
 package com.example.servicefeign;
 
 
+import com.yongle.model.Demo;
 import org.springframework.stereotype.Component;
 
 /**
@@ -15,5 +16,10 @@ public class ServiceHystrix implements IndexService {
     @Override
     public String index(String name) {
         return "sorry," + name;
+    }
+
+    @Override
+    public String body(Demo demo) {
+        return "sorry," + demo;
     }
 }
