@@ -1,13 +1,10 @@
 package com.yongle.model;
 
 /**
- * <p>类名称：Demo
- * <p>描述说明：
- * <p>作者单位：恒生芸擎网络有限公司
- * <p>版本号：2.0.0.0
- *
- * @author weinh
- * @date 2018-03-05 9:52
+ * 类 名 称：Demo.java
+ * 功能说明：
+ * 开发人员：weinh
+ * 开发时间：2018年04月24日
  */
 public class Demo {
     private String name;
