@@ -9,7 +9,7 @@ security:
 turbine:
   aggregator:
     clusterConfig: default
-  app-config: SERVICE-FEIGN,SERVICE-RIBBON
+  app-config: service-feign,service-ribbon
   cluster-name-expression: new String("defalut")
 eureka:
   client:
