@@ -7,11 +7,9 @@ security:
   basic:
     enabled: false
 turbine:
-  aggregator:
-    clusterConfig: default
-  app-config: service-feign,service-ribbon
-  cluster-name-expression: new String("defalut")
+  appConfig: service-feign,service-ribbon
+  clusterNameExpression: "'default'"
 eureka:
   client:
-    service-url:
+    serviceUrl:
       defaultZone: http://peer1:7001/eureka/

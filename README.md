@@ -28,7 +28,10 @@ config-client
 >配置服务客户端，可以根据配置服务中心的配置获取需要的配置信息，支持通过消息总线的的方式使配置修改及时生效
 
 server-zipkin
->提供服务之间调用做跟踪记录使用，service-feign调用eureka_client，可以查看依赖关系
+>提供服务之间调用做跟踪记录使用，service-feign调用eureka_client，可以查看依赖关系http://127.0.0.1:7011/zipkin/
+
+service-hystrix-dashboard
+> 模块间调用情况查看仪表盘，查看路径http://localhost:7013/hystrix，可以看hystrix.stream也可以看turbine.stream
 
 service-turbine
->实现断路器聚合监控，可以将多个断路器的结果聚合现实，该配置可以监控service-feign和service_ribbon，这里还有一个问题http://127.0.0.1:7004/hystrix/monitor?stream=127.0.0.1%3A7012%2Fturbine.stream该访问链接没有正确现实，还需要研究
+>实现断路器聚合监控，可以将多个断路器的结果聚合现实，该配置可以监控service-feign和service_ribbon，查看路径http://localhost:7013/hystrix/monitor?stream=http%3A%2F%2F127.0.0.1%3A7012%2Fturbine.stream
